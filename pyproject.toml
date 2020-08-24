@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "irish-fbr"
+name = "irish_fbr"
 version = "0.1.0"
 description = "Tiny project to help me determine when Irish Foreign Birth Registry opens (currently closed due to COVID)"
 authors = ["Corbin Albert <corbin.albert@gmail.com>"]
