@@ -19,15 +19,15 @@ def text_alex(msg: str) -> None:
     )
 
 
-def is_open(response: requests.models.Response) -> bool:
-    return (
-        "Please note that we have stopped processing Foreign Birth Registrations"
-        not in response.text
-    )
+def is_open(
+    html: str,
+    search_term: str = "Please note that we have stopped processing Foreign Birth Registrations",
+) -> bool:
+    return search_term not in html
 
 
 def fetch_webpage(url: str) -> str:
-    return requests.get(url)
+    return requests.get(url).text
 
 
 def fetch_irish_fbr_webpage() -> str:
